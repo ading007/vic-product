@@ -16,7 +16,7 @@
 Documentation  Test 5-05 - Enhanced Linked Mode
 Resource  ../../resources/Util.robot
 Suite Setup  Nimbus Suite Setup  Enhanced Link Mode Setup
-Test Teardown  Run Keyword If  '${TEST STATUS}' != 'PASS'  Collect Appliance and VCH Logs  ${VCH-NAME}
+#Test Teardown  Run Keyword If  '${TEST STATUS}' != 'PASS'  Collect Appliance and VCH Logs  ${VCH-NAME}
 
 *** Variables ***
 ${NIMBUS_LOCATION}  sc
