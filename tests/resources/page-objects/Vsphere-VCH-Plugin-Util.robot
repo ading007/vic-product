@@ -133,6 +133,7 @@ Click Finish Button
 Set Docker Host Parameters
     Log To Console  Set docker host paramenters...
     Wait Until Element Is Visible And Enabled  ${vic-home-iframe}
+    Sleep  3
     Select Frame  ${vic-home-iframe}
     :FOR  ${i}  IN RANGE  999999
     \  Run Keyword And Ignore Error  Click Link  ${refresh-table-link}
@@ -266,6 +267,7 @@ Get Create VCH Count
     ${foot_text}=  Run Keyword If  ${visible}  Get Text  css=div.datagrid-foot-description
     ...            ELSE  Set Variable  ${EMPTY}
     Log  ${foot_text}
+    Capture Page Screenshot
     ${rc}  ${vch_count}=  Run And Return Rc And Output  echo '${foot_text}' | cut -d ' ' -f 5
     Log  ${vch_count}
     Should Be Equal As Integers  ${rc}  0
