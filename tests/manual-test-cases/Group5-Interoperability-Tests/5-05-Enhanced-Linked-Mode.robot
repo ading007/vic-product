@@ -16,9 +16,9 @@
 Documentation  Test 5-05 - Enhanced Linked Mode
 Resource  ../../resources/Util.robot
 Suite Setup  Nimbus Suite Setup  Enhanced Link Mode Setup
-Suite Teardown  Run Keyword And Ignore Error  Nimbus Pod Cleanup  ${nimbus_pod}  ${testbedname}
-Test Teardown  Run Keyword If  '${TEST STATUS}' != 'PASS'  Collect Appliance and VCH Logs  ${VCH-NAME}
-Test Timeout  90 minutes
+#Suite Teardown  Run Keyword And Ignore Error  Nimbus Pod Cleanup  ${nimbus_pod}  ${testbedname}
+#Test Teardown  Run Keyword If  '${TEST STATUS}' != 'PASS'  Collect Appliance and VCH Logs  ${VCH-NAME}
+#Test Timeout  90 minutes
 
 *** Keywords ***
 Enhanced Link Mode Setup
@@ -92,4 +92,4 @@ Test
     Set Environment Variable  EXTERNAL_PSC  ${psc}
     Set Environment Variable  PSC_DOMAIN  vsphere.local
 
-    Deploy OVA And Install UI Plugin And Run Regression Tests  5-05-TEST  vic-*.ova  %{TEST_DATASTORE}  %{BRIDGE_NETWORK}  %{PUBLIC_NETWORK}  %{TEST_USERNAME}  %{TEST_PASSWORD}
+ #   Deploy OVA And Install UI Plugin And Run Regression Tests  5-05-TEST  vic-*.ova  %{TEST_DATASTORE}  %{BRIDGE_NETWORK}  %{PUBLIC_NETWORK}  %{TEST_USERNAME}  %{TEST_PASSWORD}
