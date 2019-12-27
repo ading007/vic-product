@@ -72,6 +72,11 @@ Global Environment Setup
     # drone variables
     ${status}  ${message}=  Run Keyword And Ignore Error  Environment Variable Should Be Set  DRONE_BUILD_NUMBER
     Run Keyword If  '${status}' == 'FAIL'  Set Environment Variable  DRONE_BUILD_NUMBER  0
+
+    Set Environment Variable  TEST_URL       10.192.194.57
+    Set Environment Variable  TEST_PASSWORD  Admin\!23
+    Set Environment Variable  TEST_TIMEOUT    30m
+    Set Environment Variable  TEST_DATASTORE  sharedVmfs-0
     # govc env variables
     Set Environment Variable  GOVC_URL  %{TEST_URL}
     Set Environment Variable  GOVC_USERNAME  %{TEST_USERNAME}
