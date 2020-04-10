@@ -479,7 +479,7 @@ Test VCH Table Show State
     [Arguments]  ${test-name}  ${datastore}  ${bridge-network}  ${public-network}  ${ops-user}  ${ops-pwd}  ${tree-node}=1
     Set Environment Variable  DRONE_BUILD_NUMBER  0
     ${vch_list}=  Create List
-    :FOR  ${i}  IN RANGE  10
+    :FOR  ${i}  IN RANGE  5
     \  Reload Page
     \  ${visible}=  Check VCH Fail Alert
     \  Should Not Be True  ${visible}
